@@ -1,0 +1,124 @@
+.app {
+  background-color: lightblue;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+body {
+  margin-top: 0;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 2em; /* Adjust the size as needed */
+  margin-top: 20px; /* Adjust the top margin as needed */
+  margin-bottom: 20px; /* Adjust the bottom margin as needed */
+}
+
+.quiz-container {
+  gap: 10px; /* Add gap between quiz-area and description-area */
+}
+
+.quiz-area {
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.description-area {
+  box-sizing: border-box;
+  border: 0 green;
+  padding: 20px;
+}
+
+/* Media query for screens at least 600px wide */
+@media screen and (min-width: 600px) {
+  .quiz-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .quiz-area {
+    flex: 3;
+    max-width: calc(60% - 20px);
+  }
+
+  .description-area {
+    flex: 2;
+    max-width: calc(40% - 20px);
+  }
+}
+
+/* Media query for screens smaller than 600px wide */
+@media screen and (max-width: 599px) {
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .quiz-area,
+  .description-area {
+    max-width: 100%; /* Set the width to 100% for screens smaller than 600px wide */
+  }
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.randomize-btn {
+  padding: 5px;
+  color: black;
+  background-color: lightgray;
+  border-radius: 8px;
+  border: 1px solid rgb(115, 128, 128);
+  box-shadow: 0 0 10px white;  
+}
+
+.randomize-btn:active {
+  box-shadow: none;
+}
+
+.random-selector {
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.rounded-input {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid gray ;
+  padding: 5px;
+  margin-right: '10px';
+  width: 70px;
+}
+
+.correct {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid green;
+  padding: 5px;
+  margin-right: '10px';
+  width: 70px;
+}
+
+.in-correct{
+  margin-top: 20px;
+  border-radius: 5px;
+  border:2px solid red;
+  padding: 5px;
+  margin-right: '10px';
+  width: 70px;
+
+}
+
+.input-wrapper {
+  margin-right: 20px;
+}
